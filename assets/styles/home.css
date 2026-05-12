@@ -1,0 +1,91 @@
+#mockup > main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  background: url("/assets/images/preview_camera.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-top: auto;
+    padding: 2.5rem;
+
+    button {
+        transition: all 0.2s ease-in-out;
+    }
+
+    button:hover {
+        transform: scale(1.05);
+        filter: brightness(1.2);
+    }
+
+    button#galeria {
+      width: 3.25rem;
+      height: 3.25rem;
+      border-radius: 8px;
+
+      border: none;
+
+      overflow: hidden;
+      cursor: pointer;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    button#capturar {
+      position: relative;
+
+      width: 4.25rem;
+      height: 4.25rem;
+      border-radius: 50%;
+
+      border: 4px solid #ffffff;
+      background-color: #00000080;
+
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        border: 2px solid #e3ca46;
+      }
+    }
+
+    button#flash {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+
+      border: none;
+      background-color: #00000059;
+      color: #ffffff;
+
+      cursor: pointer;
+    }
+  }
+}
+
+#mockup > footer a:nth-child(1) {
+  color: #0000ee;
+}
