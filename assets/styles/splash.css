@@ -1,0 +1,14 @@
+#mockup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #0000ee;
+  padding: 2.5rem;
+
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 18rem;
+  }
+}
