@@ -1,37 +1,354 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Jovi Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jovi Sans", sans-serif;
 }
 
-html, body {
-    height: 100%;
-    width: 100%;
-    background-color: #1E1E1E;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #1e1e1e;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #mockup {
-    width: 100%;
-    height: 100%;
-    max-width: 24rem;
-    max-height: 53rem;
-    border-radius: 40px;
-    border: 6px solid #0F0F0F;
-    background-color: #FFF;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+  max-width: 24rem;
+  max-height: 53rem;
+
+  border-radius: 40px;
+  border: 6px solid #0f0f0f;
+  background-color: #f2f2f4;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: sticky;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 8rem;
+    min-height: 5px;
+    border-radius: 5px;
+    margin-top: auto;
+
+    background-color: #929499;
+    z-index: 100;
+  }
+}
+
+#mockup > header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+
+  padding: 1.5rem;
+  padding-bottom: 0;
+
+  div {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    h1,
+    input {
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      color: inherit;
+      text-decoration: none;
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 1.25rem;
+    }
+
+    h1 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      font-size: 2rem;
+      margin-bottom: -0.5rem;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    input {
+      opacity: 0;
+
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      background-color: #e6e6e8;
+      height: 2.5rem;
+      border-radius: 99px;
+      padding: 0 0.75rem;
+      border: none;
+      width: 100%;
+
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    input:focus ~ h1,
+    input:not(:placeholder-shown) ~ h1 {
+      opacity: 0;
+    }
+
+    input:focus,
+    input:not(:placeholder-shown) {
+      opacity: 1;
+      outline: none;
+      pointer-events: auto;
+    }
+  }
+
+  label {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    margin-left: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #f0f0f0;
+      transition: background-color 0.2s ease-in-out;
+    }
+  }
+}
+
+#mockup > footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+
+  width: 100%;
+  border-top: 1px solid #ebebeb;
+  padding-bottom: 1rem;
+  margin-top: auto;
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.75rem;
+    line-height: 1;
+    text-decoration: none;
+    padding: 0.75rem;
+
+    font-weight: 600;
+
+    color: #9d9d9f;
+
+    i {
+      font-size: 1.1rem;
+      padding: 0.5rem;
+    }
+  }
+}
+
+#mockup > button#fab {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 4rem;
+  min-height: 4rem;
+  border-radius: 50%;
+
+  background-color: #0000ee;
+  color: #ffffff;
+
+  font-size: 1.5rem;
+  line-height: 0;
+
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+}
+
+#mockup:has(> footer) > button#fab {
+  bottom: 6rem;
+}
+
+dialog[open].modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:  auto;
+
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: transparent;
+  border: none;
+
+  z-index: 100;
+
+  form {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 22rem;
+    border-radius: 16px;
+    padding: 1.5rem;
+
+    background-color: #ffffff;
+    border: none;
+
+    & > i {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+
+      padding: 1rem;
+      margin-bottom: 1rem;
+      font-size: 2.5rem;
+
+      background-color: #9d9d9f;
+      color: #ffffff;
+    }
+
+    label {
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem 1.25rem;
+      border-radius: 99px;
+      border: 1px solid #e2e8f0;
+      font-size: 1rem;
+
+      &::placeholder {
+        font-size: 1rem;
+        color: #94a3b8;
+      }
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: 99px;
+      margin-top: 1rem;
+
+      font-size: 1rem;
+      font-weight: 600;
+
+      background-color: #0000ee;
+      color: #ffffff;
+      box-shadow: 0 4px 16px 0 #0000ee40;
+
+      cursor: pointer;
+      border: none;
+    }
+
+    button#fechar {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 50%;
+
+      background-color: transparent;
+      color: #64748b;
+      border: 2px solid #64748b;
+
+      font-size: 0.75rem;
+      line-height: 0;
+
+      cursor: pointer;
+    }
+  }
+}
+
+dialog[open].modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @media (max-width: 768px) {
-    #mockup {
-        border: none;
-        max-width: 100%;
-        max-height: 100%;
-        border-radius: 0;
+  html,
+  body {
+    background-color: #f2f2f4;
+    background-color: #f0f0f0;
+    color: #000000;
+  }
+
+  #mockup {
+    border: none;
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 0;
+
+    padding-bottom: 4rem;
+
+    &::after {
+      display: none;
     }
+  }
+
+  #mockup > footer {
+    position: fixed;
+    padding-bottom: 0;
+  }
 }

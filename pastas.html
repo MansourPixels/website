@@ -15,10 +15,46 @@
     <link rel="stylesheet" href="/assets/styles/fonts.css" />
 
     <script src="/assets/scripts/script.js" defer></script>
+    <script src="/assets/scripts/pastas.js" defer></script>
   </head>
   <body>
     <div id="mockup">
-      <h1>Pastas</h1>
+      <header>
+        <div>
+          <input type="search" placeholder="Pesquisar" id="pesquisa" />
+          <h1>Pastas</h1>
+        </div>
+        <label for="pesquisa">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+      </header>
+      <main id="pastas"></main>
+      <footer>
+        <a href="/home.html">
+          <i class="fa-solid fa-house"></i>
+          <span>Início</span>
+        </a>
+        <a href="/pastas.html">
+          <i class="fa-solid fa-folder"></i>
+          <span>Pastas</span>
+        </a>
+      </footer>
+
+      <button id="fab">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+
+      <dialog id="adicionar-pasta" class="modal">
+        <form>
+          <button id="fechar" type="button">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <i class="fa-solid fa-folder-plus"></i>
+          <label>Nome da pasta:</label>
+          <input type="text" placeholder="Matemática, português..." />
+          <button type="submit">Adicionar pasta</button>
+        </form>
+      </dialog>
     </div>
   </body>
 </html>
