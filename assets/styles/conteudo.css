@@ -1,0 +1,68 @@
+/* ------------------ HEADER ------------------ */
+
+
+button {
+  background-color: transparent;
+  border: none;
+  width: 36px;
+  height: 36px;
+}
+
+/* ------------------ NAV-CARDS ------------------ */
+#nav-cards-section {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem; /* substitui o margin lateral dos cards */
+  gap: 0.75rem;      /* substitui o margin vertical dos cards */
+} 
+
+
+.nav-tools {
+
+  display: flex;
+  width: 100%;       /* ocupa a largura da section */
+  height: 5.8rem;
+  border-radius: 1rem;
+  background-color: #ffff;  
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 0.75rem;
+    color: #808080;
+    line-height: 1.12rem;
+  }
+}
+
+.nav-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 2.12rem;
+  width: 2.12rem;
+  border-radius: 0.5rem;
+  margin: 1.87rem 1.25rem 1.87rem 1.25rem;
+}
+
+.flash-card-icon {
+  background-color: #00A676;
+}
+
+.resumo-icon {
+  background-color: #6F2DBD;
+}
+
+.simulado-icon {
+  background-color: #EE8434;
+}
