@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revi - Entrar</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+    <link rel="stylesheet" href="../assets/styles/auth.css" />
+    <link rel="stylesheet" href="../assets/styles/fonts.css" />
+
+    <script src="../assets/scripts/script.js" defer></script>
+    <script src="../assets/scripts/login.js" defer></script>
+  </head>
+  <body>
+    <div id="mockup">
+      <header class="login-brand">
+        <img src="../assets/images/logo.svg" alt="Revi" />
+        <h1>Entrar</h1>
+        <p>Acesse suas pastas e assuntos para continuar estudando.</p>
+      </header>
+
+      <main class="login-main">
+        <form id="login-form">
+          <label for="email">E-mail</label>
+          <div class="login-field">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              inputmode="email"
+              placeholder="seu@email.com"
+              required
+            />
+          </div>
+
+          <label for="senha">Senha</label>
+          <div class="login-field">
+            <i class="fa-solid fa-lock" aria-hidden="true"></i>
+            <input
+              id="senha"
+              name="senha"
+              type="password"
+              autocomplete="current-password"
+              placeholder="••••••••"
+              required
+              minlength="8"
+            />
+            <button
+              type="button"
+              class="login-toggle-senha"
+              aria-label="Mostrar ou ocultar senha"
+            >
+              <i class="fa-solid fa-eye"></i>
+            </button>
+          </div>
+
+          <div class="login-row">
+            <label class="login-lembrar">
+              <input type="checkbox" name="lembrar" />
+              <span>Lembrar de mim</span>
+            </label>
+            <a href="./esqueci-senha.html" class="login-link">Esqueci a senha</a>
+          </div>
+
+          <button type="submit" class="login-submit">
+            Entrar
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </form>
+
+        <p class="login-footer">
+          Não tem conta?
+          <a href="./cadastro.html" class="login-link">Criar conta</a>
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

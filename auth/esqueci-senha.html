@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Revi - Esqueci a senha</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+    <link rel="stylesheet" href="../assets/styles/auth.css" />
+    <link rel="stylesheet" href="../assets/styles/fonts.css" />
+
+    <script src="../assets/scripts/script.js" defer></script>
+    <script src="../assets/scripts/esqueci-senha.js" defer></script>
+  </head>
+  <body>
+    <div id="mockup">
+      <header class="login-brand">
+        <img src="../assets/images/logo.svg" alt="Revi" />
+        <h1>Esqueci a senha</h1>
+        <p>
+          Enviaremos instruções para redefinir sua senha no e-mail cadastrado.
+        </p>
+      </header>
+
+      <main class="login-main">
+        <form id="esqueci-form">
+          <label for="email">E-mail</label>
+          <div class="login-field">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              inputmode="email"
+              placeholder="seu@email.com"
+              required
+            />
+          </div>
+
+          <button type="submit" class="login-submit">
+            Enviar link
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </button>
+        </form>
+
+        <p class="login-footer">
+          Lembrou da senha?
+          <a href="./login.html" class="login-link">Voltar para entrar</a>
+        </p>
+      </main>
+    </div>
+  </body>
+</html>

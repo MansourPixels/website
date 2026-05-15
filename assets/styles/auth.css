@@ -1,0 +1,246 @@
+#mockup {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+#mockup .login-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  padding: 2rem 1.5rem 1.75rem;
+  background-color: #0000ee;
+  color: #ffffff;
+
+  border-radius: 0 0 28px 28px;
+
+  img {
+    max-width: 10rem;
+    height: auto;
+    margin-bottom: 1.25rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 0.9375rem;
+    line-height: 1.45;
+    opacity: 0.92;
+    max-width: 18rem;
+  }
+}
+
+.login-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+#login-form,
+#esqueci-form,
+#cadastro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(15, 15, 15, 0.06);
+
+  > label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #334155;
+    margin-top: 0.25rem;
+  }
+
+  > label:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.login-hint {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: #64748b;
+  margin-top: -0.125rem;
+  margin-bottom: 0.25rem;
+}
+
+.login-termos {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #475569;
+
+  input {
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+    accent-color: #0000ee;
+    cursor: pointer;
+  }
+
+  a {
+    color: #0000ee;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.login-field {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+
+  padding: 0 1rem;
+  border-radius: 99px;
+  border: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:focus-within {
+    border-color: #0000ee;
+    box-shadow: 0 0 0 3px #0000ee22;
+    background-color: #ffffff;
+  }
+
+  > i {
+    font-size: 1rem;
+    color: #94a3b8;
+    flex-shrink: 0;
+  }
+
+  input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.75rem 0;
+    border: none;
+    background: transparent;
+    font-size: 1rem;
+    outline: none;
+    color: #0f172a;
+
+    &::placeholder {
+      color: #94a3b8;
+    }
+  }
+}
+
+.login-toggle-senha {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  flex-shrink: 0;
+
+  &:hover {
+    background-color: #f1f5f9;
+    color: #0000ee;
+  }
+}
+
+.login-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.login-lembrar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+
+  input {
+    width: 1.125rem;
+    height: 1.125rem;
+    accent-color: #0000ee;
+    cursor: pointer;
+  }
+}
+
+.login-link {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0000ee;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.login-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.875rem 1rem;
+  border-radius: 99px;
+  border: none;
+
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+
+  background-color: #0000ee;
+  color: #ffffff;
+  box-shadow: 0 4px 16px 0 #0000ee40;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+
+  &:hover {
+    transform: scale(1.02);
+    filter: brightness(1.08);
+  }
+
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9375rem;
+  color: #64748b;
+}
