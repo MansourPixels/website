@@ -1,0 +1,44 @@
+#mockup {
+  overflow-y: auto;
+  background:
+    radial-gradient(
+      100% 100% at 50% 0%,
+      rgba(111, 45, 189, 0.2) 0%,
+      rgba(242, 242, 244, 0.2) 100%
+    ),
+    #f2f2f4;
+
+  header h1 {
+    text-align: center;
+    width: 100%;
+    padding-right: 2.5rem;
+  }
+
+  #resumo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+
+    border-radius: 16px;
+    padding: 1rem;
+    margin: 1.5rem;
+
+    font-size: 0.875rem;
+
+    background-color: #ffffff;
+    list-style-position: inside;
+
+    h2 {
+      font-size: 1.125rem;
+    }
+
+    p {
+      width: 100%;
+    }
+
+    math {
+      font-family: courier;
+      text-align: center;
+    }
+  }
+}
