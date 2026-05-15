@@ -4,11 +4,12 @@
   justify-content: center;
 
   background-color: #0000ee;
-  padding: 2.5rem;
+  padding: 0 2.5rem;
 
   img {
     width: 100%;
     height: auto;
+    margin-top: auto;
     max-width: 18rem;
   }
 }
