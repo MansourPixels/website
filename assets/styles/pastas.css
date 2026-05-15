@@ -5,6 +5,7 @@
 }
 
 #pastas {
+  flex: 1;
   display: grid;
   gap: 1.5rem;
   padding: 1.5rem;
