@@ -1,3 +1,5 @@
+const REGEX_EMAIL = /^[\w+.]+@\w+\.\w{2,}(?:\.\w{2})?$/;
+
 function abrirModal(botaoId, modalId) {
   const botao = document.getElementById(botaoId);
   const modal = document.getElementById(modalId);
