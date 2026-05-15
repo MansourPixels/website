@@ -1,5 +1,6 @@
-/* ------------------ HEADER ------------------ */
-
+#mockup {
+  overflow-y: auto;
+}
 
 button {
   background-color: transparent;
@@ -8,22 +9,19 @@ button {
   height: 36px;
 }
 
-/* ------------------ NAV-CARDS ------------------ */
 #nav-cards-section {
   display: flex;
   flex-direction: column;
-  padding: 0 1.5rem; /* substitui o margin lateral dos cards */
-  gap: 0.75rem;      /* substitui o margin vertical dos cards */
-} 
-
+  padding: 0 1.5rem;
+  gap: 0.75rem;
+}
 
 .nav-tools {
-
   display: flex;
-  width: 100%;       /* ocupa a largura da section */
+  width: 100%;
   height: 5.8rem;
   border-radius: 1rem;
-  background-color: #ffff;  
+  background-color: #ffff;
 
   div {
     display: flex;
@@ -56,21 +54,18 @@ button {
 }
 
 .flash-card-icon {
-  background-color: #00A676;
+  background-color: #00a676;
 }
 
 .resumo-icon {
-  background-color: #6F2DBD;
+  background-color: #6f2dbd;
 }
 
 .simulado-icon {
-  background-color: #EE8434;
+  background-color: #ee8434;
 }
 
-
-/* ------------------ PICTURE-GRID ------------------ */
-
-#image-grid-section{
+#image-grid-section {
   display: grid;
   list-style: none;
   grid-template-columns: 1fr 1fr;
