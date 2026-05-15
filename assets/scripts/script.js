@@ -137,7 +137,12 @@ const materias = [
         ultimaAtualizacao: "2026-05-11",
         imagens: gerarImagens(),
       },
-      { id: 6, nome: "Análise combinatória", ultimaAtualizacao: "2026-05-10" },
+      {
+        id: 6,
+        nome: "Análise combinatória",
+        ultimaAtualizacao: "2026-05-10",
+        imagens: gerarImagens(),
+      },
       {
         id: 7,
         nome: "Trigonometria",
