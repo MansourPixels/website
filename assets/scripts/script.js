@@ -37,7 +37,7 @@ function pesquisar(elementoId, parentId) {
 
     if (itensFiltrados.length === 0 && !imagemVazio) {
       const imagemVazio = document.createElement("img");
-      imagemVazio.src = "/assets/images/vazio.svg";
+      imagemVazio.src = "./assets/images/vazio.svg";
       imagemVazio.alt = "Nenhum item encontrado";
       imagemVazio.classList.add("vazio");
       parent.appendChild(imagemVazio);

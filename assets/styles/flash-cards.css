@@ -1,0 +1,16 @@
+#mockup {
+  overflow-y: auto;
+  background:
+    radial-gradient(
+      100% 100% at 50% 0%,
+      rgba(0, 166, 118, 0.2) 0%,
+      rgba(242, 242, 244, 0.2) 100%
+    ),
+    #f2f2f4;
+
+  header h1 {
+    text-align: center;
+    width: 100%;
+    padding-right: 2.5rem;
+  }
+}
