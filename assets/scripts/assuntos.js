@@ -87,7 +87,7 @@ materias
         <a href="/conteudo.html?materia=${materia}&conteudo=${conteudo.id}" class="conteudo-assunto">
             <h2>${conteudo.nome}</h2>
             <div class="imagens">
-            ${conteudo.imagens.map((imagem) => `<img src="${imagem}" alt="" />`).join("")}
+              ${conteudo.imagens?.map((imagem) => `<img src="${imagem}" alt="" />`).join("")}
             </div>
             <span>${data}</span>
         </a>
