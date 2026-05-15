@@ -15,10 +15,39 @@
     <link rel="stylesheet" href="/assets/styles/fonts.css" />
 
     <script src="/assets/scripts/script.js" defer></script>
+    <script src="/assets/scripts/assuntos.js" defer></script>
   </head>
   <body>
     <div id="mockup">
-      <h1>Assuntos</h1>
+      <header>
+        <div>
+          <a href="/pastas.html">
+            <i class="fa-solid fa-chevron-left"></i>
+          </a>
+          <input type="search" placeholder="Pesquisar" id="pesquisa" />
+          <h1 id="assunto"></h1>
+        </div>
+        <label for="pesquisa">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </label>
+      </header>
+      <main id="assuntos"></main>
+
+      <button id="fab">
+        <i class="fa-solid fa-plus"></i>
+      </button>
+
+      <dialog id="adicionar-assunto" class="modal">
+        <form>
+          <button id="fechar" type="button">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+          <i class="fa-solid fa-folder-plus"></i>
+          <label>Nome do assunto:</label>
+          <input type="text" placeholder="Equação, Redação..." />
+          <button type="submit">Salvar assunto</button>
+        </form>
+      </dialog>
     </div>
   </body>
 </html>

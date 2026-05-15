@@ -41,5 +41,5 @@ materias.forEach((materia, index) => {
   pastas.appendChild(pasta);
 });
 
-pesquisar(".pasta");
+pesquisar(".pasta", "pastas");
 abrirModal("fab", "adicionar-pasta");
