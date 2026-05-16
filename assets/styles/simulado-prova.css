@@ -76,14 +76,14 @@
         }
       }
 
-      li:nth-child(2):has(input:checked) label {
-        border-color: #4da600;
-        background-color: #4da6001a;
-      }
-
       li:has(input:checked) label {
         border-color: #a60000;
         background-color: #a600001a;
+      }
+
+      li:has(input[data-correta="true"]:checked) label {
+        border-color: #4da600;
+        background-color: #4da6001a;
       }
     }
 

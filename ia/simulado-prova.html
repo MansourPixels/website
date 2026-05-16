@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../assets/styles/fonts.css" />
 
     <script src="../assets/scripts/script.js" defer></script>
+    <script src="../assets/scripts/simulado-prova.js" defer></script>
   </head>
   <body>
     <div id="mockup">
@@ -27,45 +28,16 @@
         </div>
       </header>
       <form id="simulado">
-        <progress value="30" max="100"></progress>
-        <span>Pergunta 03 de 10</span>
-        <h2>Qual é a forma geral de uma equação do terceiro grau?</h2>
-        <ul>
-          <li>
-            <label>
-              <strong>A.</strong> ax³ + bx² + cx + d = 0
-              <input type="radio" name="pergunta" value="A" required>
-            </label>
+        <progress id="progresso-simulado" value="0" max="100"></progress>
+        <span id="indice-pergunta"></span>
+        <h2 id="texto-pergunta"></h2>
+        <ul id="lista-alternativas"></ul>
 
-          </li>
-          <li>
-            <label>
-              <strong>B.</strong> ax² + bx + c = 0
-              <input type="radio" name="pergunta" value="B" required>
-            </label>
-
-          </li>
-          <li>
-            <label>
-              <strong>C.</strong> ax + b = 0
-              <input type="radio" name="pergunta" value="C" required>
-            </label>
-
-          </li>
-          <li>
-            <label>
-              <strong>D.</strong> ax³ + bx² + cx + d = 0
-              <input type="radio" name="pergunta" value="D" required>
-            </label>
-
-          </li>
-        </ul>
-
-        <button type="submit">
+        <button type="submit" id="btn-proxima">
           <i class="fa-solid fa-chevron-right"></i>
           <span>Próxima pergunta</span>
         </button>
-      </for>
+      </form>
     </div>
   </body>
 </html>
