@@ -1,3 +1,7 @@
+#mockup {
+  position: relative;
+}
+
 #mockup > main {
   flex: 1;
   display: flex;
@@ -18,12 +22,12 @@
     padding: 2.5rem;
 
     button {
-        transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
 
     button:hover {
-        transform: scale(1.05);
-        filter: brightness(1.2);
+      transform: scale(1.05);
+      filter: brightness(1.2);
     }
 
     button#galeria {
@@ -88,4 +92,43 @@
 
 #mockup > footer a:nth-child(1) {
   color: #0000ee;
+}
+
+#mockup > section#selecao-imagem {
+  position: absolute;
+  inset: 0;
+  z-index: 60;
+
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #000000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  header {
+    color: #ffffff;
+  }
+
+  footer {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    width: 100%;
+    height: 4rem;
+    border-radius: 99px;
+
+    border: none;
+    background-color: #0000ee;
+    color: #ffffff;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+  }
 }
