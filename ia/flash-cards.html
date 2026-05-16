@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../assets/styles/fonts.css" />
 
     <script src="../assets/scripts/script.js" defer></script>
+    <script src="../assets/scripts/flash-cards.js" defer></script>
   </head>
   <body>
     <div id="mockup">
@@ -26,6 +27,66 @@
           <h1>Flash Cards</h1>
         </div>
       </header>
+
+      <section id="progress-bar-section">
+        <progress max="100" value="30"></progress>
+      </section>
+
+      <section class="flip-card">
+        <div class="flip-card-inner">
+          <div class="card-section-front">
+            <div>
+              <div id="texto">
+                <h2>Qual é a forma geral de uma equação do terceiro grau?</h2>
+                <p id="numeracao">Pergunta 03 de 10</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-section-back">
+            <div>
+              <div id="texto">
+                <h2>Qual é a forma geral de uma equação do terceiro grau?</h2>
+                <p>
+                  ax³ + bx² + cx + d = 0, onde a, b, c e d são números reais (ou
+                  complexos) e obrigatoriamente a≠0.
+                </p>
+                <p id="numeracao">Pergunta 03 de 10</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="review-section">
+        <button type="button" id="btn-reveal-answer" class="review-actions__reveal">
+          <i class="fa-solid fa-bolt-lightning"></i>
+          <span>Revelar Resposta</span>
+        </button>
+        <div
+          class="review-actions__levels"
+          role="group"
+        >
+          <button type="button" class="review-actions__level" data-level="facil">
+            <span class="review-actions__level-icon">
+              <img src="../assets/images/niveis/facil.svg" alt="" width="42" height="42" />
+            </span>
+            <span class="review-actions__level-label">Fácil</span>
+          </button>
+          <button type="button" class="review-actions__level" data-level="medio">
+            <span class="review-actions__level-icon">
+              <img src="../assets/images/niveis/medio.svg" alt="" width="42" height="42" />
+            </span>
+            <span class="review-actions__level-label">Médio</span>
+          </button>
+          <button type="button" class="review-actions__level" data-level="dificil">
+            <span class="review-actions__level-icon">
+              <img src="../assets/images/niveis/dificil.svg" alt="" width="42" height="42" />
+            </span>
+            <span class="review-actions__level-label">Difícil</span>
+          </button>
+        </div>
+      </section>
     </div>
   </body>
 </html>
