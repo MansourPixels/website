@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="../assets/styles/fonts.css" />
 
     <script src="../assets/scripts/script.js" defer></script>
+    <script src="../assets/scripts/simulado-prova.js" defer></script>
   </head>
   <body>
     <div id="mockup">
@@ -26,6 +27,17 @@
           <h1>Simulado de prova</h1>
         </div>
       </header>
+      <form id="simulado">
+        <progress id="progresso-simulado" value="0" max="100"></progress>
+        <span id="indice-pergunta"></span>
+        <h2 id="texto-pergunta"></h2>
+        <ul id="lista-alternativas"></ul>
+
+        <button type="submit" id="btn-proxima">
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>Próxima pergunta</span>
+        </button>
+      </form>
     </div>
   </body>
 </html>
