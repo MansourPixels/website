@@ -14,17 +14,26 @@
     <link rel="stylesheet" href="./assets/styles/home.css" />
     <link rel="stylesheet" href="./assets/styles/fonts.css" />
 
-    <script src="./assets/scripts/assunto.js" defer></script>
+    <script src="./assets/scripts/home.js" defer></script>
   </head>
   <body>
     <div id="mockup">
       <main id="camera">
+        <video id="camera-preview" autoplay muted playsinline></video>
+        <div id="camera-erro" class="camera-erro" hidden>
+          <p>Não foi possível acessar a câmera.</p>
+          <p class="camera-erro-detalhe"></p>
+        </div>
         <footer>
-          <button id="galeria">
-            <img src="./assets/images/preview_camera.png" alt="" />
+          <button id="galeria" type="button">
+            <img
+              id="galeria-thumb"
+              src="./assets/images/preview_camera.png"
+              alt=""
+            />
           </button>
-          <button id="capturar"></button>
-          <button id="flash">
+          <button id="capturar" type="button"></button>
+          <button id="flash" type="button">
             <i class="fa-solid fa-bolt"></i>
           </button>
         </footer>
@@ -39,6 +48,18 @@
           <span>Pastas</span>
         </a>
       </footer>
+
+      <section id="selecao-imagem">
+        <header>
+          <div>
+            <a href="./home.html"><i class="fa-solid fa-chevron-left"></i></a>
+          </div>
+        </header>
+
+        <footer>
+          <a href="./conteudo.html">Selecionar imagem</a>
+        </footer>
+      </section>
     </div>
   </body>
 </html>

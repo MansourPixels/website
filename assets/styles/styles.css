@@ -50,7 +50,7 @@ body {
   }
 }
 
-#mockup > header {
+#mockup header {
   display: flex;
   align-items: center;
   justify-content: space-between;

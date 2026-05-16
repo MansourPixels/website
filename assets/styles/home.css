@@ -1,14 +1,65 @@
+#mockup {
+  position: relative;
+}
+
 #mockup > main {
+  position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-height: 0;
 
-  background: url("../images/preview_camera.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  background-color: #0f0f0f;
+
+  #camera-preview {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Câmera frontal costuma vir sem espelhar; alinha ao comportamento de “selfie”. */
+  #camera-preview.camera-preview-espelhada {
+    transform: scaleX(-1);
+  }
+
+  .camera-erro {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1.5rem;
+
+    text-align: center;
+    color: #ffffff;
+    font-size: 0.95rem;
+    line-height: 1.4;
+
+    background-color: #0f0f0f;
+  }
+
+  .camera-erro[hidden] {
+    display: none;
+  }
+
+  .camera-erro-detalhe {
+    font-size: 0.8rem;
+    opacity: 0.75;
+  }
 
   footer {
+    position: relative;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,12 +69,12 @@
     padding: 2.5rem;
 
     button {
-        transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
     }
 
     button:hover {
-        transform: scale(1.05);
-        filter: brightness(1.2);
+      transform: scale(1.05);
+      filter: brightness(1.2);
     }
 
     button#galeria {
@@ -35,8 +86,9 @@
 
       overflow: hidden;
       cursor: pointer;
+      background-color: #1a1a1a;
 
-      img {
+      img#galeria-thumb {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -88,4 +140,48 @@
 
 #mockup > footer a:nth-child(1) {
   color: #0000ee;
+}
+
+#mockup > section#selecao-imagem {
+  position: absolute;
+  inset: 0;
+  z-index: 60;
+
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+
+  background-color: #000000;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  header {
+    color: #ffffff;
+  }
+
+  footer {
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+      height: 4rem;
+      border-radius: 99px;
+
+      border: none;
+      background-color: #0000ee;
+      color: #ffffff;
+
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+
+      cursor: pointer;
+    }
+  }
 }
